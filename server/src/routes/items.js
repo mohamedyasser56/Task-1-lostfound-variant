@@ -10,5 +10,10 @@ import {
 const router = Router();
 
 // TODO: wire up the routes described in README.md section 3.
+router.get('/', getAllItems);        // list (+ ?status=&category= filters)
+router.get('/:id', getItem);         // read one
+router.post('/', createItem);        // create
+router.patch('/:id', updateItem);    // partial update
+router.delete('/:id', deleteItem);   // delete
 
 export default router;
